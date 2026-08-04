@@ -1,0 +1,40 @@
+@use "../../styles/variables" as *;
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  background: $text-color2;
+  padding: 10px;
+  color: $text-color1;
+  img {
+    display: flex;
+    height: 75px;
+    width: 60px;
+    transition: 0.4s;
+    border-radius: 300px;
+    padding: 12px;
+
+    &:hover {
+      background: $hover-background;
+      transform: scale(1.1);
+    }
+  }
+
+  ul {
+    display: flex;
+
+    gap: 30px;
+
+    li {
+      padding: 13px;
+      border-radius: 10px;
+      transition: 0.2s;
+      &:hover {
+        background-color: $hover-background;
+        transform: scale(1.1);
+      }
+    }
+  }
+}

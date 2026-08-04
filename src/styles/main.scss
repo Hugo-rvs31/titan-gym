@@ -1,2 +1,8 @@
 @use "./reset";
 @use "./variables";
+
+body {
+  font-family: "Noto Sans Display", sans-serif;
+  background-color: rgb(17, 17, 17);
+  color: white;
+}

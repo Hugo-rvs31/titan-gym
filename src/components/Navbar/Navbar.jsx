@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
+import heroLogo from "../../assets/logo/logo-website.png";
 
 const Navbar = () => {
   return (
     <nav>
       <Link to="/">
-        <h2>TITAN GYM</h2>
+        <img src={heroLogo} alt="Logo Titan Gym" />
       </Link>
 
       <ul>

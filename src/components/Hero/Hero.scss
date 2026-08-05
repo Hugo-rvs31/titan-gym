@@ -1,7 +1,6 @@
 @use "../../styles/variables" as *;
 
 .hero-section {
-  min-height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,19 +15,20 @@
     border-radius: 20px;
     margin: 30px;
     color: $text-color2;
-
     background: rgba(97, 97, 97, 0.39);
+    padding: 30px;
 
     &:hover {
       background: $hover-background;
     }
-
-    h1 {
-      text-align: center;
-      font-size: 3rem;
-    }
-    p {
-      text-align: center;
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font-size: 2.6rem;
+      }
+      p {
+      }
     }
   }
 }

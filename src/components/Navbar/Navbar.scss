@@ -24,10 +24,10 @@ nav {
 
   ul {
     display: flex;
-
     gap: 30px;
 
     li {
+      font-weight: bold;
       padding: 13px;
       border-radius: 10px;
       transition: 0.2s;

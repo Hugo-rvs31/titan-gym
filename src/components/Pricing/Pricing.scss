@@ -1,0 +1,36 @@
+@use "../../styles/variables" as *;
+
+.pricing {
+  margin-top: 15px;
+  padding-top: 15px;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $before-line;
+  }
+  h2 {
+    text-align: center;
+  }
+  .pricing-cards {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    .pricing-card {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h3 {
+      }
+      .price {
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,14 +1,25 @@
 @use "../../styles/variables" as *;
 
 .pricing {
-  margin-top: 15px;
-  padding-top: 15px;
+  margin-top: 23px;
+  padding-top: 23px;
   position: relative;
   &:before {
     content: "";
     position: absolute;
     height: 1px;
     width: 70%;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $before-line;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 70%;
+    bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
     background-color: $before-line;

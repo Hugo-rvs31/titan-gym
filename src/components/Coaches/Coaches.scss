@@ -1,0 +1,85 @@
+.coaches {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+  }
+
+  .coaches-array {
+    display: grid;
+    grid-template-columns: 20% 20% 20%;
+    justify-content: space-evenly;
+    @media (max-width: 1100px) {
+      grid-template-columns: 33.33% 33.33% 33.33%;
+    }
+    @media (max-width: 940px) {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      gap: 20px;
+    }
+    .coach {
+      display: grid;
+      grid-template-rows: 55% 45%;
+      padding: 20px;
+      gap: 10px;
+      @media (max-width: 940px) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      img {
+        max-height: 400px;
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      .content {
+        display: grid;
+        grid-template-rows: 13% 13% 45% 29%;
+        h3 {
+          margin-top: 8px;
+          font-weight: bold;
+          letter-spacing: 2px;
+          font-size: 1.6rem;
+          @media (max-width: 1725px) {
+            margin-top: 0;
+          }
+        }
+
+        .role {
+        }
+        .specialities {
+          margin-top: 10px;
+          h4 {
+            text-decoration: underline;
+            font-size: 1.3rem;
+          }
+          ul {
+            margin-top: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            li {
+              font-size: 1rem;
+              position: relative;
+              padding-left: 20px;
+              &::before {
+                content: "";
+                position: absolute;
+                content: "⚡";
+                left: -3px;
+              }
+            }
+          }
+        }
+
+        .description {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

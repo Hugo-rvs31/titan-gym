@@ -1,3 +1,5 @@
+@use "../../styles/variables" as *;
+
 .coaches {
   margin-top: 50px;
   display: flex;
@@ -5,28 +7,44 @@
   justify-content: center;
   align-items: center;
   h1 {
+    text-decoration: underline;
+    @media (max-width: 940px) {
+      margin-bottom: 30px;
+    }
   }
 
   .coaches-array {
     display: grid;
     grid-template-columns: 20% 20% 20%;
     justify-content: space-evenly;
+    min-height: 850px;
     @media (max-width: 1100px) {
       grid-template-columns: 33.33% 33.33% 33.33%;
     }
     @media (max-width: 940px) {
       display: flex;
       flex-direction: column;
-      width: 50%;
+
       gap: 20px;
+    }
+    @media (max-width: 570px) {
+      width: 70%;
+    }
+    @media (max-width: 480px) {
+      width: 80%;
+    }
+    @media (max-width: 370px) {
+      width: 100%;
     }
     .coach {
       display: grid;
-      grid-template-rows: 55% 45%;
+      grid-template-rows: 50% 50%;
       padding: 20px;
       gap: 10px;
       @media (max-width: 940px) {
         display: flex;
+      }
+      @media (max-width: 570px) {
         flex-direction: column;
       }
 
@@ -37,8 +55,16 @@
       }
 
       .content {
+        border-left: 1px $before-line solid;
+        padding-left: 15px;
         display: grid;
         grid-template-rows: 13% 13% 45% 29%;
+        @media (max-width: 940px) {
+          padding-top: 10px;
+        }
+        @media (max-width: 570px) {
+          min-height: 380px;
+        }
         h3 {
           margin-top: 8px;
           font-weight: bold;
@@ -78,6 +104,9 @@
 
         .description {
           font-size: 0.9rem;
+          @media (max-width: 750px) {
+            font-size: 0.8rem;
+          }
         }
       }
     }

@@ -1,0 +1,168 @@
+@use "../../styles/variables" as *;
+
+.contact {
+  margin: 0 auto;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 0;
+
+  .introduction {
+    h2 {
+      text-decoration: underline;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    p {
+    }
+  }
+
+  .informations {
+    h2 {
+      text-decoration: underline;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    ul {
+      li {
+        display: flex;
+        position: relative;
+        padding-left: 25px;
+
+        &::before {
+          position: absolute;
+          left: 0;
+        }
+
+        &:nth-child(1)::before {
+          content: "📍";
+        }
+
+        &:nth-child(2)::before {
+          content: "☎";
+        }
+
+        &:nth-child(3)::before {
+          content: "✉";
+        }
+
+        h3 {
+        }
+
+        p {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .horaires {
+    h2 {
+      text-decoration: underline;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    ul {
+      padding-left: 20px;
+      li {
+        list-style-type: disc;
+      }
+    }
+  }
+
+  .formulaire {
+    h2 {
+      text-decoration: underline;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    form {
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid $before-line;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      .form-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        label {
+          padding-left: 5px;
+        }
+
+        input {
+          border: none;
+          outline: none;
+          background: $background-color-form;
+          padding: 10px;
+          border-radius: 5px;
+          color: $text-color2;
+
+          &:focus {
+            background: $background-color-form-focus;
+          }
+        }
+
+        select {
+          height: 35px;
+          border: none;
+          outline: none;
+          background: $background-color-form;
+          border-radius: 5px;
+          font-weight: bold;
+          padding-left: 4px;
+          color: $text-color1;
+          &:focus {
+            background: $background-color-form-focus;
+            color: $text-color2;
+          }
+        }
+
+        textarea {
+          border: none;
+          outline: none;
+          background: $background-color-form;
+          border-radius: 5px;
+          resize: vertical;
+          padding: 10px;
+          &:focus {
+            background: $background-color-form-focus;
+            color: $text-color2;
+          }
+        }
+      }
+      button {
+        height: 35px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        font-weight: bold;
+        width: 70%;
+        margin: 13px auto;
+        background: $background-color-form;
+        cursor: pointer;
+        &:hover {
+          background: $background-color-form-hover;
+          color: $text-color2;
+        }
+
+        &:focus {
+          background: $background-color-form-focus;
+          color: $text-color2;
+        }
+
+        &:active {
+          background: $background-color-form-focus;
+          color: $text-color2;
+        }
+      }
+    }
+  }
+}

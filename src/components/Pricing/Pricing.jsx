@@ -2,7 +2,7 @@ import "./Pricing.scss";
 
 const Pricing = () => {
   return (
-    <section className="pricing">
+    <section className="pricing" id="pricing">
       <h2>Nos tarifs</h2>
 
       <div className="pricing-cards">

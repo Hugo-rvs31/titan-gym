@@ -13,12 +13,20 @@ h6 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
+
+  @media (max-width: 500px) {
+    font-size: 120%;
+  }
 }
 
 p {
   font-family: "Noto Sans Display", sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
+
+  @media (max-width: 500px) {
+    font-size: 0.9rem;
+  }
 }
 
 a {
@@ -33,4 +41,16 @@ ul {
 li {
   list-style-type: none;
   cursor: pointer;
+}
+
+label {
+  @media (max-width: 500px) {
+    font-size: 90%;
+  }
+}
+
+button {
+  @media (max-width: 500px) {
+    font-size: 0.8rem;
+  }
 }

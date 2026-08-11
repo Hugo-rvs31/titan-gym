@@ -42,7 +42,7 @@ const Coaches = () => {
     },
   ];
   return (
-    <section className="coaches">
+    <section className="coaches" id="coaches">
       <h1>Nos coaches</h1>
       <div className="coaches-array">
         {coaches.map((coach) => (

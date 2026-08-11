@@ -8,6 +8,8 @@ nav {
   background: $text-color2;
   padding: 10px;
   color: $text-color1;
+  position: relative;
+
   img {
     display: flex;
     height: 75px;
@@ -21,8 +23,7 @@ nav {
       transform: scale(1.1);
     }
   }
-
-  ul {
+  .desktop-menu {
     display: flex;
     gap: 30px;
 
@@ -31,10 +32,101 @@ nav {
       padding: 13px;
       border-radius: 10px;
       transition: 0.2s;
+
       &:hover {
         background-color: $hover-background;
         transform: scale(1.1);
       }
     }
+  }
+
+  .cta-button {
+    display: block;
+  }
+
+  // Hamburger
+  .menu-button {
+    display: none;
+  }
+
+  // Menu mobile
+  .menu-container {
+    display: none;
+  }
+
+  @media (max-width: 630px) {
+    justify-content: space-between;
+    padding: 10px 80px;
+
+    // On cache le menu desktop
+    .desktop-menu,
+    > .cta-button {
+      display: none;
+    }
+
+    .menu-button {
+      display: block;
+      font-size: 2.4rem;
+      border: none;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    .menu-container {
+      display: none;
+
+      &.open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background: $text-color2;
+        z-index: 10;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 1px;
+          background: $before-line;
+          width: 70%;
+          top: -3px;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+
+          li {
+            font-weight: bold;
+            padding: 10px;
+            transition: 0.4s ease-in-out;
+
+            &:hover {
+              background: $before-line;
+              border-radius: 10px;
+            }
+          }
+        }
+
+        .cta-button {
+          display: block;
+        }
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    padding: 10px 40px;
+  }
+  @media (max-width: 320px) {
+    padding: 10px 30px;
   }
 }

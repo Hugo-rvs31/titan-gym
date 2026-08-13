@@ -41,7 +41,19 @@ nav {
   }
 
   .cta-button {
+    color: rgb(219, 92, 177);
+    font-weight: bold;
     display: block;
+    text-align: center;
+    padding: 6px;
+    transition: 0.4s ease-in-out;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    &:hover {
+      border: 2px solid rgb(219, 92, 177);
+      background: rgb(247, 238, 244);
+    }
   }
 
   // Hamburger
@@ -54,7 +66,7 @@ nav {
     display: none;
   }
 
-  @media (max-width: 630px) {
+  @media (max-width: 660px) {
     justify-content: space-between;
     padding: 10px 80px;
 
@@ -74,52 +86,68 @@ nav {
     }
 
     .menu-container {
-      display: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+
+      padding: 10px;
+      padding-bottom: 25px;
+
+      background: $text-color2;
+      z-index: 10;
+
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+
+      transition:
+        transform 0.4s ease-in-out,
+        opacity 0.4s ease-in-out;
 
       &.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        background: rgb(194, 194, 194);
+        width: 80%;
+        top: -3px;
+      }
+
+      ul {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
-
-        position: absolute;
-        top: 100%;
-        left: 0;
+        gap: 15px;
         width: 100%;
-        padding: 10px;
-        background: $text-color2;
-        z-index: 10;
 
-        &:before {
-          content: "";
-          position: absolute;
-          height: 1px;
-          background: $before-line;
-          width: 70%;
-          top: -3px;
-        }
-
-        ul {
+        li {
+          font-weight: bold;
+          padding: 10px;
+          width: 100%;
           display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 15px;
+          justify-content: center;
 
-          li {
-            font-weight: bold;
-            padding: 10px;
-            transition: 0.4s ease-in-out;
-
-            &:hover {
-              background: $before-line;
-              border-radius: 10px;
-            }
+          &:hover {
+            background: $hover-background;
+            border-radius: 10px;
           }
         }
+      }
 
-        .cta-button {
-          display: block;
-        }
+      .cta-button {
+        display: block;
       }
     }
   }

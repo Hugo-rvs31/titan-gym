@@ -47,18 +47,21 @@ const Navbar = () => {
       <div className={`menu-container ${menuOpen ? "open" : ""}`}>
         <ul>
           <li>
-            <a href="#about">À propos</a>
+            <a href="#about" onClick={() => setMenuOpen(false)}>
+              À propos
+            </a>
           </li>
 
           <li>
-            <a href="#pricing">Tarifs</a>
+            <a href="#pricing" onClick={() => setMenuOpen(false)}>
+              Tarifs
+            </a>
           </li>
 
           <li>
-            <a href="#coaches">Coachs</a>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
+            <a href="#coaches" onClick={() => setMenuOpen(false)}>
+              Coachs
+            </a>
           </li>
           <li>
             <Link to="/contact">Contact</Link>

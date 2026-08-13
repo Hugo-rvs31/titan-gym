@@ -1,0 +1,36 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  background: grey;
+  border-top: 1px solid red;
+
+  .big-part {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .first-part {
+      .up {
+        display: flex;
+
+        img {
+          display: flex;
+          height: 75px;
+          width: 60px;
+          transition: 0.4s;
+          border-radius: 300px;
+          padding: 12px;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+      .down {
+      }
+    }
+    .second-part {
+    }
+    .third-part {
+    }
+  }
+}

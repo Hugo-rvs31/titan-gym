@@ -27,9 +27,9 @@ const Footer = () => {
         </div>
         <div className="third-part">
           <div className="socials">
-            <FaInstagram />
-            <FaFacebook />
-            <FaTiktok />
+            <FaInstagram id="iconSocials" />
+            <FaFacebook id="iconSocials" />
+            <FaTiktok id="iconSocials" />
           </div>
         </div>
       </div>

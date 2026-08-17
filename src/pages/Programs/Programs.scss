@@ -1,0 +1,95 @@
+@use "../../styles/variables" as *;
+
+.programs {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .hero {
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .presentation {
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .programs-map {
+    .programs-array {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+
+      .program {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        color: $text-color1;
+        background: $text-color2;
+        box-shadow: 4px 6px 7px 2px rgba(255, 255, 255, 0.25);
+        border-radius: 10px;
+        width: 30%;
+        @media (max-width: 1000px) {
+          width: 45%;
+        }
+
+        @media (max-width: 650px) {
+          width: 80%;
+        }
+
+        h3 {
+        }
+
+        .icon {
+        }
+
+        h4 {
+        }
+
+        .duration {
+        }
+
+        .description {
+        }
+      }
+    }
+  }
+  .objectives {
+    .objectives-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      button {
+        cursor: pointer;
+        border-radius: 10px;
+        border: none;
+        height: 40px;
+        background: blue;
+        width: 30%;
+        @media (max-width: 1000px) {
+          width: 45%;
+        }
+
+        @media (max-width: 650px) {
+          width: 80%;
+        }
+      }
+    }
+  }
+}

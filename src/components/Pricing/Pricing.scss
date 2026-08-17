@@ -26,18 +26,32 @@
   }
   h2 {
     text-align: center;
+    font-size: 1.8rem;
   }
   .pricing-cards {
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
+    @media (max-width: 570px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
     .pricing-card {
       padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
+
       h3 {
+        @media (max-width: 570px) {
+          margin-bottom: 5px;
+        }
       }
       .price {
+        font-weight: bold;
+        font-size: 1.1rem;
+        @media (max-width: 570px) {
+          margin-bottom: 5px;
+        }
       }
       p {
         text-align: center;

@@ -30,6 +30,9 @@ const Navbar = () => {
             <li>
               <a href="#coaches">Coachs</a>
             </li>
+            <li>
+              <Link to="/programs">Nos programmes</Link>
+            </li>
 
             <li>
               <Link to="/contact">Contact</Link>

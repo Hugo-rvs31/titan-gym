@@ -74,6 +74,9 @@ footer {
             border: 1px solid $text-color1;
           }
         }
+        @media (max-width: 400px) {
+          flex-direction: column;
+        }
       }
     }
     .third-part {
@@ -103,5 +106,11 @@ footer {
     margin-top: 30px;
     display: flex;
     justify-content: space-around;
+
+    h3 {
+      @media (max-width: 400px) {
+        font-size: 0.9rem;
+      }
+    }
   }
 }

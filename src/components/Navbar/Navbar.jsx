@@ -7,29 +7,34 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const location = useLocation();
-  const isContactPage = location.pathname === "/contact";
+
+  const isSimpleNavbar =
+    location.pathname === "/contact" || location.pathname === "/programs";
 
   return (
-    <nav className={isContactPage ? "contact-navbar" : ""}>
+    <nav className={isSimpleNavbar ? "simple-navbar" : ""}>
+      {/* Logo */}
       <Link to="/">
         <img src={heroLogo} alt="Logo Titan Gym" />
       </Link>
 
-      {!isContactPage && (
+      {/* Navbar complète */}
+      {!isSimpleNavbar && (
         <>
           {/* Menu desktop */}
           <ul className="desktop-menu">
             <li>
-              <a href="#about">À propos</a>
+              <a href="/#about">À propos</a>
             </li>
 
             <li>
-              <a href="#pricing">Tarifs</a>
+              <a href="/#pricing">Tarifs</a>
             </li>
 
             <li>
-              <a href="#coaches">Coachs</a>
+              <a href="/#coaches">Coachs</a>
             </li>
+
             <li>
               <Link to="/programs">Nos programmes</Link>
             </li>
@@ -39,6 +44,7 @@ const Navbar = () => {
             </li>
           </ul>
 
+          {/* Bouton Essai gratuit */}
           <Link to="/contact" className="cta-button">
             Essai gratuit
           </Link>
@@ -74,11 +80,23 @@ const Navbar = () => {
               </li>
 
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link to="/programs" onClick={() => setMenuOpen(false)}>
+                  Nos programmes
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/contact" onClick={() => setMenuOpen(false)}>
+                  Contact
+                </Link>
               </li>
             </ul>
 
-            <Link to="/contact" className="cta-button">
+            <Link
+              to="/contact"
+              className="cta-button"
+              onClick={() => setMenuOpen(false)}
+            >
               Essai gratuit
             </Link>
           </div>

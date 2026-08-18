@@ -9,6 +9,9 @@ nav {
   padding: 10px;
   color: $text-color1;
   position: relative;
+  &.simple-navbar {
+    justify-content: center;
+  }
 
   img {
     display: flex;

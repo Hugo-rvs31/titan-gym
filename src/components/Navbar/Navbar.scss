@@ -59,21 +59,18 @@ nav {
     }
   }
 
-  // Hamburger
   .menu-button {
     display: none;
   }
 
-  // Menu mobile
   .menu-container {
     display: none;
   }
 
-  @media (max-width: 660px) {
+  @media (max-width: 860px) {
     justify-content: space-between;
     padding: 10px 80px;
 
-    // On cache le menu desktop
     .desktop-menu,
     > .cta-button {
       display: none;
